@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    
+}
+
+:root {
+--White: hsl(0, 0%, 100%);
+
+--Stone100: hsl(30, 54%, 90%);
+--Stone150: hsl(30, 18%, 87%);
+--Stone600: hsl(30, 10%, 34%);
+--Stone900: hsl(24, 5%, 18%);
+
+--Brown800: hsl(14, 45%, 36%);
+
+--Rose800: hsl(332, 51%, 32%);
+--Rose50: hsl(330, 100%, 98%);
+}
+
+body {
+    background-color: var(--Stone100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 600px;
+    padding: 5px 5px 5px 25px;
+    border-radius: 16px;
+
+}
+
+.imgBaner {
+    width: 550px;
+    margin: 10px 0 0 0;
+}
+
+.imgBaner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+
+h1 {
+    padding: 20px 0 20px 0;
+}
+
+.times {
+    background-color: var(--Rose50);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.times > h2 {
+    color: var(--Rose800);
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+
+.list {
+    padding-left: 25px;
+
+}
+
+.list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    padding-left: 10px;
+    color: var(--Stone600);
+}
+
+.list li:last-child {
+    margin-bottom: 0;
+}
+
+.list li::marker {
+    color: var(--Rose800);
+}
+
+.ingredients {
+    border-bottom: 1px solid var(--Stone150);
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+
+.ingredients > h2{
+    color: var(--Brown800);
+    font-size: 25px;
+    margin-bottom: 10px ;
+
+}
+
+ 
+.instructions > h2{
+    color: var(--Brown800);
+    font-size: 25px;
+    margin-bottom: 10px ;
+}
+
+.txtBold {
+    font-weight: bold;
+}
+
+.nutrition > h2{
+    color: var(--Brown800);
+    font-size: 25px;
+    margin-bottom: 10px ;
+}
+
+/* Вся секция Nutrition */
+.nutrition {
+    padding: 20px 0;
+}
+
+/* Настройка самой таблицы */
+table {
+    width: 100%;             /* Растягиваем на всю ширину */
+    border-collapse: collapse; /* Схлопываем границы, чтобы была одна линия, а не две */
+    margin-top: 20px;
+}
+
+/* Стили для каждой ячейки (текста внутри) */
+td {
+    padding: 12px 25px;      /* Отступы внутри ячеек (верх/низ и право/лево) */
+    border-bottom: 1px solid var(--Stone150); /* Та самая линия под каждой строкой */
+    font-size: 16px;
+    color: var(--Stone600);
+}
+
+/* Убираем линию у самой последней строки, чтобы снизу было чисто */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Стили для второй колонки (цифр) */
+.nutritionValue {
+    color: var(--Brown800);  /* Коричневый цвет из твоих переменных */
+    font-weight: 700;        /* Делаем жирным */
+}
